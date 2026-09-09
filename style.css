@@ -1,0 +1,263 @@
+:root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --brand-accent: #0284c7;
+      --brand-dark: #0f172a;
+      --border-color: #e2e8f0;
+      --tag-bg: #f0f9ff;
+      --tag-border: #bae6fd;
+      --tag-text: #0369a1;
+      --code-bg: #f1f5f9;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .cv-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Header Section */
+    header {
+      background-color: var(--brand-dark);
+      color: #ffffff;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+    }
+
+    header .title {
+      font-size: 1.25rem;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #334155;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .contact-info item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout Grid */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .cv-grid {
+        grid-template-columns: 320px 1fr;
+      }
+    }
+
+    /* Sections */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--brand-accent);
+      margin-bottom: 1rem;
+    }
+
+    /* Summary Card */
+    .summary-card {
+      background-color: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+      text-align: justify;
+    }
+
+    /* Sidebar Components */
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--brand-accent);
+      padding: 0.85rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-card h4 {
+      font-size: 0.85rem;
+      color: var(--tag-text);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.25rem;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 0.85rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card h4 {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .info-card .sub {
+      color: var(--brand-accent);
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .info-card .meta {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 0.2rem;
+    }
+
+    .cred-id {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      background-color: var(--code-bg);
+      color: var(--text-secondary);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      word-break: break-all;
+    }
+
+    /* Main Content Experience Cards */
+    .job-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (min-width: 576px) {
+      .job-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    .job-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .job-company {
+      font-size: 0.95rem;
+      color: var(--brand-accent);
+      font-weight: 600;
+    }
+
+    .job-date-loc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .project-badge {
+      background-color: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--tag-text);
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tech-stack {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .bullet-list {
+      padding-left: 1.2rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+    }
+
+    .bullet-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .bullet-list li:last-child {
+      margin-bottom: 0;
+    }
